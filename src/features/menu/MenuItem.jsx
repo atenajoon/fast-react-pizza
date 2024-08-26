@@ -2,7 +2,8 @@ import { formatCurrency } from '../../utils/helpers';
 
 function MenuItem({ pizza }) {
   const { id, name, unitPrice, ingredients, soldOut, imageUrl } = pizza;
-  console.log(id, name, unitPrice, ingredients, soldOut, imageUrl);
+  // REMOVE
+  console.log(id);
 
   return (
     <li>
