@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
 import LinkButton from '../../ui/LinkButton';
 import Button from '../../ui/Button';
 import CartItem from './CartItem';
+import EmptyCart from './EmptyCart';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearCart, getCart, getUsername } from './cartSlice';
 
@@ -9,6 +9,8 @@ function Cart() {
   const cart = useSelector(getCart);
   const username = useSelector(getUsername);
   const dispatch = useDispatch();
+
+  if (!cart.length) return <EmptyCart />;
 
   return (
     <div className="px-4 py-3">
